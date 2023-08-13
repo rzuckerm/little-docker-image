@@ -2,7 +2,7 @@
 DOCKER_IMAGE=$1
 DOCKER_RUN="docker run --rm -i -v $(pwd):/local -w /local ${DOCKER_IMAGE}"
 
-CMD=""
+CMD="L hello_world.l"
 RESULT="$(${DOCKER_RUN} sh -c "${CMD}")"
 echo "${RESULT}"
 if [ "${RESULT}" = "Hello, world!" ]
